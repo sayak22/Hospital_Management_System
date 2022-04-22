@@ -19,6 +19,7 @@ li {
 .nav-link:hover {
   color: rgb(95, 95, 153);
   background-color: white;
+  transition: 0.3s;
 }
 
 #logo {
