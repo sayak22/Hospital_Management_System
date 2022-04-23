@@ -209,5 +209,16 @@ a {
     color: #ffffff;
   }
 }
-
 /* hamburger end */
+/* doctor body */
+.doctor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem;
+}
+
+.doctor h2{s
+  font-family: "Montserrat", sans-serif;
+}
+/* doctor body end */
