@@ -216,10 +216,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 6rem;
+  margin: 5rem;
+  flex-flow: column;
 }
 
 .doctor h2{s
   font-family: "Montserrat", sans-serif;
+}
+
+.doctorform{
+  display: inline;
+  align-items: center;
+justify-content: center;
+margin:3rem;
+}
+.specialisation{
+  margin: 0.75rem auto 1.5rem auto;
 }
 /* doctor body end */
