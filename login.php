@@ -1,3 +1,46 @@
+<?php
+session_start();
+if(isset($_POST['submit'])){
+
+  $server="localhost:3307";
+    $username="root";
+    $password="";
+    $con=mysqli_connect($server,$username,$password);
+    if(!$con)
+{
+    die("connection to this database failed" . mysqli_connect_error());
+}
+    $con=mysqli_connect($server,$username,$password);
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $sql=mysqli_query($con,"SELECT Name FROM `hospital`.`sign` where Email='$email' and Password='$password'");
+    $_SESSION['sno']=$sno;
+    $name_sql="SELECT `name`,email from `hospital`.`sign` where `email`='$email'";
+  
+  
+    if($sql)
+    {
+        
+            if (mysqli_num_rows($sql) > 0) {
+             { 
+              $name_result=$con->query(($name_sql));
+              $namee = $name_result->fetch_array()[0] ?? '';
+              $emaill=$name_result->fetch_array()[1] ?? '';
+              $_SESSION['person_name']=$namee;
+              $_SESSION['person_email']=$emaill;
+            header('Location:details.php');
+             }
+            } else {
+              echo 'not found';
+            }
+     }
+    else {
+    echo 'Error: '.mysql_error();
+        }
+    
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -83,7 +126,7 @@
             numbers, and must not contain spaces, special characters, or emoji.
           </div>
         </div>
-        <button type="submit" class="btn btn-primary submit">Log in</button>
+        <input type="submit" class="btn btn-primary submit" name="submit" value="Submit"/>
       </form>
     </div>
     <!-- formEndsHere -->

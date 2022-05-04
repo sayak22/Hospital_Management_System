@@ -1,3 +1,30 @@
+<?php
+if(isset($_POST['submit'])){
+$server="localhost:3307";
+$username="root";
+$password="";
+$con=mysqli_connect($server,$username,$password);
+if(!$con)
+{
+    die("connection to this database failed" . mysqli_connect_error());
+}
+$name=$_POST['name'];
+$email=$_POST['email'];
+$username=$_POST['username'];
+$password=$_POST['password'];
+$phone=$_POST['phone'];
+$sql="INSERT INTO `hospital`.`sign` (`Name`, `Email`, `Username`, `Password`, `Phone`, `Date`) 
+VALUES ('$name', '$email', '$username', '$password', '$phone', current_timestamp())";
+// echo $sql;
+if($con->query($sql)==true)
+header('Location:login.php');
+else
+echo "ERROR: $sql <br> $con->error";
+$con->close();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -112,7 +139,7 @@
         
         
 
-        <input type="submit" class="btn btn-primary submit" name="submit"></input>
+        <input type="submit" class="btn btn-primary submit" name="submit" value="Submit"></input>
       </form>
     </div>
     <!-- formEndsHere -->
