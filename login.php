@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     $sql=mysqli_query($con,"SELECT Name FROM `hospital`.`sign` where Email='$email' and Password='$password'");
     $_SESSION['sno']=$sno;
-    $name_sql="SELECT `name`,email from `hospital`.`sign` where `email`='$email'";
+    $name_sql="SELECT `name`,`email` from `hospital`.`sign` where `email`='$email'";
   
   
     if($sql)
@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
             header('Location:details.php');
              }
             } else {
-              echo 'not found';
+              header('Location:incorrect.php');
             }
      }
     else {
@@ -82,8 +82,8 @@ if(isset($_POST['submit'])){
       <div class="nav-links">
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="doctors.html">Doctors</a></li>
-          <li><a class="nav-link" href="query.htmls">Query</a></li>
+          <li><a class="nav-link" href="doctors.php">Doctors</a></li>
+          <li><a class="nav-link" href="query.html">Query</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
           <li class="login-signup">
             <a href="signup.html">Signup</a>

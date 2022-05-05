@@ -95,7 +95,7 @@ $insert=0;
       <div class="nav-links">
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="doctors.html">Doctors</a></li>
+          <li><a class="nav-link" href="doctors.php">Doctors</a></li>
           <li><a class="nav-link" href="query.html">Query</a></li>
           <li><a class="nav-link" href="about.asp">About</a></li>
           <li class="login-signup">
@@ -107,7 +107,7 @@ $insert=0;
         <i class="fas fa-bars"></i>
       </div>
     </div>
-    <h1 class="details-h1">Welcome <?php echo $_SESSION['person_name'] ?>. Book your appointment!</h1>
+    <h1 class="details-h1 successapp">Welcome <?php echo $_SESSION['person_name'] ?>. Book your appointment!</h1>
     <div class="form-signup">
       <div class="mb-3">
     

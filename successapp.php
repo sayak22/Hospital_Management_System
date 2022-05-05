@@ -43,8 +43,8 @@ session_start();
       <div class="nav-links">
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="doctors.html">Doctors</a></li>
-          <li><a class="nav-link" href="query.html">Query</a></li>
+          <li><a class="nav-link" href="doctors.php">Doctors</a></li>
+          <!-- <li><a class="nav-link" href="query.html">Query</a></li> -->
           <li><a class="nav-link" href="about.asp">About</a></li>
           <li class="login-signup">
             <a href="login.html">Log in</a>
@@ -64,7 +64,7 @@ session_start();
     Appointment No.: 
     <?php
   echo $_SESSION['var'];
-  echo $_SESSION['doc'];
+  // echo $_SESSION['doc'];
   
    ?>
 </h1>

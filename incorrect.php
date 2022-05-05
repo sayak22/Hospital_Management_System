@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&family=Dancing+Script&family=Pacifico&display=swap"
@@ -17,8 +24,8 @@
       src="https://kit.fontawesome.com/5e62d29057.js"
       crossorigin="anonymous"
     ></script>
-    <title>Query</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>Signup</title>
   </head>
   <body>
     <!-- navbar -->
@@ -33,10 +40,10 @@
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="doctors.php">Doctors</a></li>
-          <!-- <li><a class="nav-link" href="query.html">Query</a></li> -->
-          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="query.html">Query</a></li>
+          <li><a class="nav-link" href="about.asp">About</a></li>
           <li class="login-signup">
-            <a href="login.html">login</a> / <a href="signup.html">signup</a>
+            <a href="login.html">Log in</a>
           </li>
         </ul>
       </div>
@@ -44,10 +51,10 @@
         <i class="fas fa-bars"></i>
       </div>
     </div>
-    <!-- navbar end -->
-    <div class="doctor">
-      <h2>Enter your queries:</h2>
-    </div>
-    <script src="./app.js"></script>
-  </body>
+
+    <h1 class="successapp">Username or password doesn't match. Please Login again.</h1>
+    <form method="POST" action="login.php">  
+    <input type="submit" class="btn btn-primary submit" name="" value="Login"/> 
+     </form> 
+</body>
 </html>
